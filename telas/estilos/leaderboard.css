@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #141414;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+}
+
+.texto {
+    flex: 1;
+    min-width: 0;
+    min-height: 20px;
+    font-size: 14px;
+    color: #149414;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 200;
+    padding: 5px;
+}
+
+#quadrado {
+    background-color: #141414;
+    max-height: 80vh;
+    width: 80vw;
+    max-width: 600px;
+    border: 3px solid #149414;
+    align-items: flex-end;
+    overflow: auto;
+}
+
+#voltar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #149414;
+}
