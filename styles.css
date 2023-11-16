@@ -2,10 +2,14 @@ body {
     background-color: #141414;
     margin: 0;
     height: 100vh;
-    font-family: 'Press Start 2P', monospace;
 }
 
-#header {
+@font-face {
+    font-family: 'Modeseven';
+    src: url('fonte/Modeseven-L3n5.ttf') format('truetype');
+}
+
+header {
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -14,7 +18,8 @@ body {
     gap: 60px;
 }
 
-#header a {
+header a {
+    font-family: 'Press Start 2P', monospace;
     text-decoration: none;
     color: #149414;
     font-size: 20px;
@@ -28,15 +33,24 @@ body {
     align-items: center;
 }
 
+#conteudo h1 {
+    color: #149414;
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 200;
+}
+
 #terminal {
+    display: flex;
+    flex-direction: column;
     background-color: #141414;
-    max-height: 70vh;
-    width: 70vw;
+    height: 550px;
+    max-height: 550px;
+    width: 600px;
     max-width: 600px;
     border: 3px solid #149414;
     align-items: flex-end;
     overflow: auto;
-
 }
 
 #codigos {
@@ -45,15 +59,15 @@ body {
     flex-grow: 1;
 }
 
-.texto {
+.textos {
     flex: 1;
     min-width: 0;
     min-height: 20px;
-    font-size: 14px;
+    font-size: 20px;
     color: #149414;
     text-align: center;
     line-height: 2;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Modeseven', monospace;
     font-weight: 200;
     padding: 5px;
 }
@@ -66,11 +80,4 @@ body {
     border: none;
     padding: 5px;
     box-sizing: border-box;
-}
-
-h1 {
-    color: #149414;
-    margin: 0;
-    font-family: 'Press Start 2P', monospace;
-    font-weight: 200;
 }
