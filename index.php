@@ -11,15 +11,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <script src="generator.js"></script>
 
     <header>
-        <a href="telas/leaderboard.html"> Leaderboard </a>
-        <a href="telas/login.html"> entrar </a>
-        <a href="telas/register.html">cadastrar-se</a>
-    </header>
+        <a href="leaderboard.php"> Leaderboard </a>
+        <?php
+        session_start();
+        if(empty($_SESSION['cc_user'])){
+            
+        ?>
+            <a href="login.php"> Entrar </a>
+            <a href="register.php"> Cadastrar-se </a>
+        <?php
+            }
+        ?>
+    </header> 
 
     <div id="conteudo">
         <h1 style="margin-bottom: 5px;">CRACK THE CODE</h1>
