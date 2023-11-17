@@ -1,5 +1,6 @@
 <?php
 require './conn.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $result = $conn->query("SELECT * FROM users WHERE nomeUser = ".$_POST['user']." AND password = ".sha1($_POST['senha'])."");
 if ($result->num_rows > 0) {
@@ -9,4 +10,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "<script>window.location.href='../login.php'</script>";
 }
+}
+echo "<script>window.location.href='../login.php'</script>";
+
 ?>

@@ -1,16 +1,13 @@
 <?php
 require './conn.php';
 
-
-// Verifique se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     $nomeUser = $_POST["user"];
     $email = $_POST["email"];
-    $password = sha1($_POST["senha"]); // Hash da senha para segurança
+    $password = sha1($_POST["senha"]); 
 
-    // Inserir dados na tabela 'users'
     $sql = "INSERT INTO users (nomeUser, email, password) VALUES ('$nomeUser', '$email', '$password')";
     $result = $conn->query($sql);
     if ($result) {
@@ -24,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
    
 }
+echo "<script>window.location.href='../register.php'</script>";
 
 
 
