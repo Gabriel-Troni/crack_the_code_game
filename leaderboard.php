@@ -11,23 +11,43 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/leaderboard.css">
 </head>
-
+<?php
+require './src/Information.php';
+require './src/conn.php';
+$info = new Information();
+$teams = $info->getTeamsPoints($conn);
+?>
 <body>
     <a id="voltar" href="../index.html">voltar</a>
-    <h1>os top 10 melhores</h1>
+    <h1>ranking das equipes</h1>
     <div id="quadrado">
+        <ul class="rank-list">
 
-        <div class="texto" id="p1"></div>
-        <div class="texto" id="p2"></div>
-        <div class="texto" id="p3"></div>
-        <div class="texto" id="p4"></div>
-        <div class="texto" id="p5"></div>
-        <div class="texto" id="p6"></div>
-        <div class="texto" id="p7"></div>
-        <div class="texto" id="p8"></div>
-        <div class="texto" id="p9"></div>
-        <div class="texto" id="p10"></div>
-
+            <?php
+        $html = "";
+        $rank = 1;
+        foreach ($teams as $team) {
+            $html .= "
+            <li class='rank-item'>
+                <div class='team-container'>
+                    <div class='team-rank'>
+                        <h3>".$rank."</h3>
+                    </div>
+                    <div class='team-info'>
+                        <h3>".$team['nomeEquipe'].":</h3>
+                        <h4>".$team['PTS']." pontos</h4>
+                    </div>
+                </div>
+            </li>    
+            ";
+            
+            $rank++;    
+        }
+        echo $html;
+        
+        
+        ?>
+        </ul>
     </div>
 </body>
 
