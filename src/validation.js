@@ -6,14 +6,14 @@ function validateForm() {
 	var hasError = false
 
 	if (!usuario) {
-		errorUsuario.textContent = 'Por favor, preencha o campo de usuário.'
+		errorUsuario.textContent = 'O campo de usuário é obrigatório'
 		hasError = true
 	} else {
 		errorUsuario.textContent = ''
 	}
 
 	if (!senha) {
-		errorSenha.textContent = 'Por favor, preencha o campo de senha.'
+		errorSenha.textContent = 'O campo de senha é obrigatório'
 		hasError = true
 	} else {
 		errorSenha.textContent = ''

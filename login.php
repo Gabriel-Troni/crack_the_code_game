@@ -33,6 +33,9 @@
         <div class="input-container">
           <button class="btn" type="submit">Entrar</button>
         </div>
+        <?php if (isset($_GET['erro'])): ?>
+          <p id="mensagemErro">Usuário ou senha incorretos</p>
+        <?php endif; ?>
         <a href="register.php">Registrar-se</a>
       </div>
     </form>
