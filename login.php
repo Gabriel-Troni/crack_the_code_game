@@ -14,18 +14,21 @@
   </head>
 
   <body>
-    <a id="voltar" href="../index.html">voltar</a>
-    <form id="login-form" action="./src/process_login.php" method="POST">
+    <a id="voltar" href="../index.php">voltar</a>
+    <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="return validateForm()">
+    <!-- <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="validateForm()"> -->
       <h1>Login</h1>
       <div class="inputs-list">
 
         <div class="input-container">
           <label>Usuário</label>
           <input name="user" type="text" placeholder="Usuário" />
+          <p id="error-usuario"></p>
         </div>
         <div class="input-container">
           <label>Senha</label>
           <input name="senha" type="password" placeholder="Senha" />
+          <p id="error-senha"></p>
         </div>
         
         <div class="input-container">
@@ -34,6 +37,6 @@
         <a href="register.php">Registrar-se</a>
       </div>
     </form>
-
+    <script src="./src/validation.js"></script>
   </body>
 </html>
