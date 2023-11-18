@@ -14,9 +14,8 @@
   </head>
 
   <body>
-    <a id="voltar" href="../index.php">voltar</a>
+    <a id="voltar" href="../index.html">voltar</a>
     <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="return validateForm()">
-    <!-- <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="validateForm()"> -->
       <h1>Login</h1>
       <div class="inputs-list">
 
