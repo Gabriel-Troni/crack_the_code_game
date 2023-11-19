@@ -1,23 +1,25 @@
 const letras = ['a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'j', 'J', 'k', 'K', 'L', 'm', 'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X', 'y', 'Y', 'z', 'Z', '!', '#', '$', '%', '*', '?', 'ç', 'Ç', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-console.log(letras.length)
 
+//pega o input
 document.addEventListener("DOMContentLoaded", function () {
     var comandoInput = document.getElementById("comando");
     var codigos = {};
+    if (i == 12) {
+        alert("GAME OVER")
+    }
 
     for (let j = 1; j <= 10; j++) {
         codigos[j] = document.getElementById(`cod${j}`);
     }
-
     comandoInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             var valorDigitado = comandoInput.value;
 
             for (let j = 1; j <= 10; j++) {
+
                 var codigo = codigos[j].textContent.trim();
-
                 if (valorDigitado === codigo) {
-
+                    pontos += codigo.length * 2;
                     for (let k = j; k <= 10; k++) {
                         var codigoAcima = codigos[k + 1].textContent.trim();
                         codigos[k].innerText = codigoAcima || '';
@@ -27,9 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     }
 
-                    i = 1; // Certifique-se de definir i antes ou declare antes do loop.
+                    i = j;
+                    document.body.classList.add('shake-animation');
                     comandoInput.value = '';
                 }
+                // reseta a animação para ela aparecer mais vezes
+                setTimeout(function () {
+                    document.body.classList.remove('shake-animation');
+                }, 1000)
             }
         }
     });
@@ -70,19 +77,23 @@ function generateCode(size) {
     }
     return code;
 }
-
+let pontos = 0;
 let i = 1;
 function populateDiv() {
-    if (i < 11) {
+    if (i <= 11) {
+        if (i == 11) {
+            alert(`Game Over, você fez ${pontos}`);
+            return
+        }
         let div = document.getElementById(`cod${i}`);
         if (div.innerHTML.trim() === '') {
             let code = generateCode(Math.floor((Math.random() * (4 + 1)) + 8));
             div.innerHTML = code;
         }
         i++;
-        setTimeout(populateDiv, Math.floor((Math.random() * 4000) + 2000));
+        setTimeout(populateDiv, Math.floor((Math.random() * 1000) + 3000));
+
     }
 }
 
 populateDiv();
-

@@ -30,8 +30,25 @@
 
     <div id="conteudo">
 
-        <h1 style="margin-bottom: 5px;">CRACK THE CODE</h1>
+        <div class="bouncing-text">
+            <div class="c">C</div>
+            <div class="r">R</div>
+            <div class="a">A</div>
+            <div class="c2">C</div>
+            <div class="k">K</div>
+            <div class="space"></div>
+            <div class="t">T</div>
+            <div class="h">H</div>
+            <div class="e">E</div>
+            <div class="space"></div>
+            <div class="c3">C</div>
+            <div class="o">O</div>
+            <div class="d">D</div>
+            <div class="e2">E</div>
+        </div>
+
         <div id="terminal">
+
             <div id="codigos">
                 <div class="textos" id="cod10"></div>
                 <div class="textos" id="cod9"></div>
@@ -44,9 +61,10 @@
                 <div class="textos" id="cod2"></div>
                 <div class="textos" id="cod1"></div>
             </div>
-            <input id="comando" type="text" value="texto" placeholder="$">
+            <input id="comando" type="text" placeholder="$">
         </div>
     </div>
+    <div id="cod11"></div>
     <script src="generator.js"></script>
 </body>
 
