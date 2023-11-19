@@ -11,24 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    <script src="generator.js"></script>
 
     <header>
         <a href="leaderboard.php"> Leaderboard </a>
         <?php
         session_start();
-        if(empty($_SESSION['cc_user'])){
-            
-        ?>
+        if (empty($_SESSION['cc_user'])) {
+
+            ?>
             <a href="login.php"> Entrar </a>
             <a href="register.php"> Cadastrar-se </a>
-        <?php
-            }
+            <?php
+        }
         ?>
-    </header> 
+    </header>
 
     <div id="conteudo">
+
         <h1 style="margin-bottom: 5px;">CRACK THE CODE</h1>
         <div id="terminal">
             <div id="codigos">
@@ -43,9 +44,10 @@
                 <div class="textos" id="cod2"></div>
                 <div class="textos" id="cod1"></div>
             </div>
-            <input id="comando" placeholder="$">
+            <input id="comando" type="text" value="texto" placeholder="$">
         </div>
     </div>
+    <script src="generator.js"></script>
 </body>
 
 </html>
