@@ -10,7 +10,7 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                return $result;
+                return mysqli_fetch_assoc($result);
             } else {
                 return [];
             }
@@ -26,7 +26,7 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                return $result;
+                return mysqli_fetch_assoc($result);
             } else {
                 return [];
             }
@@ -43,7 +43,7 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                return $result;
+                return mysqli_fetch_assoc($result);
             } else {
                 return [];
             }

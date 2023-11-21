@@ -14,7 +14,6 @@
   </head>
 
   <body>
-    <a id="voltar" href="./index.html">voltar</a>
     <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="return validateForm()">
       <h1>Login</h1>
       <div class="inputs-list">

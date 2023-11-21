@@ -14,20 +14,9 @@
 
 <body>
 
-    <header>
-        <a href="leaderboard.php"> Leaderboard </a>
-        <?php
-        session_start();
-        if (empty($_SESSION['cc_user'])) {
+    <?php require './src/navbar.php'?>
 
-            ?>
-            <a href="login.php"> Entrar </a>
-            <a href="register.php"> Cadastrar-se </a>
-            <?php
-        }
-        ?>
-    </header>
-
+    <div class="points-display"></div>
     <div id="conteudo">
 
         <div class="bouncing-text">
