@@ -18,6 +18,40 @@ header {
     gap: 60px;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2.5rem;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    color: #149414;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 20%;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    justify-content: center;
+}
+.title{
+        font-family: 'Press Start 2P', monospace;
+        color: #149414;
+    
+}
 header a {
     font-family: 'Press Start 2P', monospace;
     text-decoration: none;
@@ -67,6 +101,21 @@ header a {
     font-size: 40px;
     color: #149414;
     margin-bottom: 5px;
+}
+
+.btn{
+    background-color: #149414;
+    color: white;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+    cursor: pointer;
+    height: 50%;
+}
+
+.btn:hover{
+    background-color: #17b817;
+
 }
 
 

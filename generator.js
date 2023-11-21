@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     i = j;
                     document.body.classList.add('shake-animation');
+                    document.querySelector('.points-display').innerHTML = pontos;
+                    
                     comandoInput.value = '';
                 }
                 // reseta a animação para ela aparecer mais vezes
@@ -83,6 +85,7 @@ function populateDiv() {
     if (i <= 11) {
         if (i == 11) {
             alert(`Game Over, você fez ${pontos}`);
+            window.location.reload();
             return
         }
         let div = document.getElementById(`cod${i}`);

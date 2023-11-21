@@ -1,0 +1,159 @@
+body {
+    background-color: #141414;
+    margin: 0;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'Modeseven';
+    src: url('fonte/Modeseven-L3n5.ttf') format('truetype');
+}
+
+header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 60px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2.5rem;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    color: #149414;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 20%;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    justify-content: center;
+}
+.title{
+        font-family: 'Press Start 2P', monospace;
+        color: #149414;
+    
+}
+header a {
+    font-family: 'Press Start 2P', monospace;
+    text-decoration: none;
+    color: #149414;
+    font-size: 20px;
+    transition: color 1s ease;
+}
+
+#conteudo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#conteudo h1 {
+    color: #149414;
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 200;
+}
+
+#pontos {
+    margin: 10px;
+}
+
+#terminal {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    height: 550px;
+    max-height: 550px;
+    width: 600px;
+    max-width: 600px;
+    border: 3px solid #149414;
+    align-items: flex-end;
+    overflow: auto;
+}
+
+.bouncing-text {
+    position: relative;
+    display: flex;
+    transition: color 1s ease;
+    font-family: 'Press Start 2P', monospace;
+    font-weight: 200;
+    font-size: 40px;
+    color: #149414;
+    margin-bottom: 5px;
+}
+
+.btn{
+    background-color: #149414;
+    color: white;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+    cursor: pointer;
+    height: 50%;
+    text-decoration: none;
+
+}
+
+.btn:hover{
+    background-color: #17b817;
+
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    font-family: 'Press Start 2P', monospace;
+
+    justify-content: center;
+}
+#team-form{
+    gap: 5px;
+}
+
+#voltar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: #149414;
+    font-family: 'Press Start 2P', monospace;
+}
+
+a{
+    color: #149414;
+    font-size: small;
+}
+
+
+input{
+    border-radius:5px;
+    padding: 10px;
+    border: 1px dashed #149414;
+    outline: none;
+    background-color: #9999;
+    color: #149414;
+}
+
+
