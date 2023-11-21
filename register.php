@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<a id="voltar" href="../index.html">voltar</a>
+<a id="voltar" href="./index.html">voltar</a>
     <form id="login-form" action="./src/process_register.php" method="POST">
       <h1>Cadastro</h1>
       <div class="inputs-list">
