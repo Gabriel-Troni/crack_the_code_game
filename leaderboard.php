@@ -18,7 +18,7 @@ $info = new Information();
 $teams = $info->getTeamsPoints($conn);
 ?>
 <body>
-    <a id="voltar" href="./index.php">voltar</a>
+    <a id="voltar" href="../index.php">voltar</a>
     <h1>ranking das equipes</h1>
     <div id="quadrado">
         <ul class="rank-list">

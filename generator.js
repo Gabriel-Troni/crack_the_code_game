@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var codigo = codigos[j].textContent.trim();
                 if (valorDigitado === codigo) {
                     pontos += codigo.length * 2;
+                    updatePoints()
                     for (let k = j; k <= 10; k++) {
                         var codigoAcima = codigos[k + 1].textContent.trim();
                         codigos[k].innerText = codigoAcima || '';
@@ -31,7 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     i = j;
                     document.body.classList.add('shake-animation');
-                    document.querySelector('.points-display').innerHTML = pontos;
                     
                     comandoInput.value = '';
                 }
@@ -44,33 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/* VERSÃO MENOS OPTIMIZADA
-document.addEventListener("DOMContentLoaded", function () {
-    var comandoInput = document.getElementById("comando");
-    comandoInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            var valorDigitado = comandoInput.value;
-            for (let j = 1; j <= i; j++) {
-                var codigo = document.getElementById(`cod${j}`).innerHTML;
-                if (valorDigitado === codigo) {
-                    alert("boa")
-                    // se digitar o valor igual, todos os códigos acima vão para baixo, como uma pilha
-                    for (let k = j; k <= 10; k++) {
-                        var codigoAcima = document.getElementById(`cod${k + 1}`).textContent.trim();
-                        if (codigoAcima === '') {
-                            document.getElementById(`cod${k}`).innerText = ''; //se não tiver nada na div acima, só esvazia a div e sai do loop
-                            break;
-                        } else {
-                            document.getElementById(`cod${k}`).innerText = codigoAcima;
-                        }
-                    }
-                    //reseta para que o as divs sejam populadas desde o inicio
-                    i = 1;
-                }
-            }
-        }
-    });
-});*/
 
 function generateCode(size) {
     let code = '';
@@ -85,6 +58,9 @@ function populateDiv() {
     if (i <= 11) {
         if (i == 11) {
             alert(`Game Over, você fez ${pontos}`);
+            document.getElementById('startButton').style.display = 'block'; // Mostrar o botão novamente
+            document.getElementById('pontuacao').style.display = 'none'; // Esconder a pontuação
+
             window.location.reload();
             return
         }
@@ -98,5 +74,44 @@ function populateDiv() {
 
     }
 }
+function startTerminal(){
+	document.getElementById('startButton').style.display = 'none'
+	document.getElementById('pontuacao').style.display = 'block'
 
-populateDiv();
+	pontos = 0 // Resetar os pontos
+	i = 1
+    updatePoints()
+	populateDiv()
+}
+function updatePoints() {
+	var divPontuacao = document.getElementById('pontuacao')
+	divPontuacao.innerHTML = 'Pontuação: ' + pontos
+}
+
+    /* VERSÃO MENOS OPTIMIZADA
+    document.addEventListener("DOMContentLoaded", function () {
+        var comandoInput = document.getElementById("comando");
+        comandoInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                var valorDigitado = comandoInput.value;
+                for (let j = 1; j <= i; j++) {
+                    var codigo = document.getElementById(`cod${j}`).innerHTML;
+                    if (valorDigitado === codigo) {
+                        alert("boa")
+                        // se digitar o valor igual, todos os códigos acima vão para baixo, como uma pilha
+                        for (let k = j; k <= 10; k++) {
+                            var codigoAcima = document.getElementById(`cod${k + 1}`).textContent.trim();
+                            if (codigoAcima === '') {
+                                document.getElementById(`cod${k}`).innerText = ''; //se não tiver nada na div acima, só esvazia a div e sai do loop
+                                break;
+                            } else {
+                                document.getElementById(`cod${k}`).innerText = codigoAcima;
+                            }
+                        }
+                        //reseta para que o as divs sejam populadas desde o inicio
+                        i = 1;
+                    }
+                }
+            }
+        });
+    });*/

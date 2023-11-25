@@ -1,3 +1,8 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -13,10 +18,10 @@
 </head>
 
 <body>
+    <script src="generator.js"></script>
 
     <?php require './src/navbar.php'?>
 
-    <div class="points-display"></div>
     <div id="conteudo">
 
         <div class="bouncing-text">
@@ -37,7 +42,7 @@
         </div>
 
         <div id="terminal">
-
+            
             <div id="codigos">
                 <div class="textos" id="cod10"></div>
                 <div class="textos" id="cod9"></div>
@@ -52,9 +57,11 @@
             </div>
             <input id="comando" type="text" placeholder="$">
         </div>
+        <div>
+            <button id="startButton" class="button-start" onclick="startTerminal()">$T4RT</button>
+            <div id="pontuacao"  class="textos"  style="display: none;">Pontuação: 0</div>
+        </div>
     </div>
-    <div id="cod11"></div>
-    <script src="generator.js"></script>
 </body>
 
 </html>
