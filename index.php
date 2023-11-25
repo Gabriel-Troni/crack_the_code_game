@@ -1,8 +1,3 @@
-<?php
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-?>
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -42,7 +37,7 @@
         </div>
 
         <div id="terminal">
-            
+
             <div id="codigos">
                 <div class="textos" id="cod10"></div>
                 <div class="textos" id="cod9"></div>
@@ -62,6 +57,7 @@
             <div id="pontuacao"  class="textos"  style="display: none;">Pontuação: 0</div>
         </div>
     </div>
+    <div id="cod11"></div>
 </body>
 
 </html>

@@ -58,8 +58,8 @@ function populateDiv() {
     if (i <= 11) {
         if (i == 11) {
             alert(`Game Over, você fez ${pontos}`);
-            document.getElementById('startButton').style.display = 'block'; // Mostrar o botão novamente
-            document.getElementById('pontuacao').style.display = 'none'; // Esconder a pontuação
+            document.getElementById('startButton').style.display = 'block';
+            document.getElementById('pontuacao').style.display = 'none';
 
             window.location.reload();
             return
@@ -78,7 +78,7 @@ function startTerminal(){
 	document.getElementById('startButton').style.display = 'none'
 	document.getElementById('pontuacao').style.display = 'block'
 
-	pontos = 0 // Resetar os pontos
+	pontos = 0
 	i = 1
     updatePoints()
 	populateDiv()

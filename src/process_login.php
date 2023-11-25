@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require './conn.php';
 require './checkform.php';
 
@@ -25,11 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     } else {
         echo "<script>
-                    alert('Usuario ou senha incorretos.');
-                    window.location.href='../login.php'
-                </script>";
-
-        // header("Location: ../login.php");
+            alert('Usuario ou senha incorretos.');
+            window.location.href='../login.php'
+        </script>";
         exit;
     }
 }
