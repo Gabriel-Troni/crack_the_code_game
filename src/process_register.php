@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = sha1(sanitize($conn, $_POST["senha"])); 
 
     $sql_email = "SELECT * FROM users WHERE email = '$email'";
-    $result_email = $conn->query($sql);
+    $result_email = $conn->query($sql_email);
 
     if ($result_email->num_rows > 0) {
         echo "<script>
