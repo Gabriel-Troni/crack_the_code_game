@@ -3,7 +3,7 @@
 ## Autores
 Gabriel Troni
 Matheus Grego
-Raul
+Raul Bana
 Rodolfo C. dos Santos
 ## Descrição
 
