@@ -9,6 +9,7 @@
         <a href="leaderboard.php"> Leaderboard </a>
         <a href="equipe.php"> Equipes </a>
         <a href="index.php"> Jogar </a>
+        <a href="./src/logout.php"> Sair </a>
         <?php
         require './src/Information.php';
         require './src/conn.php';
