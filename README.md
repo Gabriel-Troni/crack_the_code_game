@@ -2,9 +2,9 @@
 
 ## Autores
 
-Gabriel Troni
-Matheus Grego
-Raul Bana
+Gabriel Troni<br>
+Matheus Grego<br>
+Raul Bana<br>
 Rodolfo C. dos Santos
 
 ## Descrição
