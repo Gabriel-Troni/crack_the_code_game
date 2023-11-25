@@ -1,5 +1,6 @@
 <?php
 require './conn.php';
+require './checkform.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = mysqli_real_escape_string($conn, $_POST['user']);

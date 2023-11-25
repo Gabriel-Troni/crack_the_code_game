@@ -16,28 +16,23 @@
 
     <?php require './src/navbar.php';
     
-    var_dump($resultUser);
+    //var_dump($resultUser);
     
     
     ?>
     <a id="voltar" href="index.php">Voltar</a>
     <div class="container">
         <div class="menu">
-            <h1 class="title">Equipes</h1>
-           
-            
-                
+            <h1 class="title">Equipes</h1>   
             <a class="btn" href="criar_equipe.php">Criar Equipe</a>
         </div>
 
-        <?php
-        if(!empty($resultUser['equipe'])){
-        ?>
-        <div>
-
-        </div>
-        <?php
-        }
+        <?php 
+        if(!empty($resultUser['equipe'])){ 
+            //<div>
+                //while(getTeams)
+            //</div>   
+        }  
         ?>
     </div>
 </body>

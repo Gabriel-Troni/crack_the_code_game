@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = sha1($_POST["senha"]); 
 
-    $sql = "INSERT INTO users (nomeUser, email, password) VALUES ('$nomeUser', '$email', '$password')";
+    $sql = "INSERT INTO users (nomeUser, email, password, points) VALUES ('$nomeUser', '$email', '$password', 0)";
     $result = $conn->query($sql);
     if ($result) {
         session_start();
