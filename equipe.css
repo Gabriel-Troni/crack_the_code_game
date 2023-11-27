@@ -32,14 +32,15 @@ header {
     align-items: center;
 }
 
-form{
-    color: #149414;
+
+.team-form{
     display: flex;
     flex-direction: column;
-    margin: auto;
-    width: 20%;
+    color: #149414;
+    gap: 20px;
+    width: 75%;
+    justify-content: center;
 }
-
 .input-container{
     display: flex;
     flex-direction: column;
@@ -52,6 +53,12 @@ form{
         color: #149414;
     
 }
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
 header a {
     font-family: 'Press Start 2P', monospace;
     text-decoration: none;
@@ -117,8 +124,66 @@ header a {
 
 .btn:hover{
     background-color: #17b817;
+    
+}
+.leave-btn{
+    background-color: #941414;
+    color: white;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+    cursor: pointer;
+    height: 50%;
+    text-decoration: none;
 
 }
+
+.create-form{
+    display: flex;
+    width: 25%;
+    margin: auto;
+}
+
+.leave-btn:hover{
+    background-color: #b81717;
+    
+}
+
+.team-info{
+    display: flex;
+    align-items: center;
+}
+
+.team-container{
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px dotted #17b817;
+    padding: 15px;
+    
+}
+.team-container-join{
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+    display: flex;
+    width: 100%;
+    border: 1px dotted #17b817;
+    justify-content: space-between;
+
+    padding: 15px;
+}
+.details-container{
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 .input-container{
     display: flex;
     flex-direction: column;
