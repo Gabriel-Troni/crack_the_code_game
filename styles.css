@@ -117,6 +117,17 @@ header a {
     background-color: #17b817;
 
 }
+.button-start{
+    cursor: pointer;
+    margin: 25px;
+    border: none;
+    border-radius:5px;
+    padding: 10px;
+    background-color: #149414;
+    width: 100%;
+    color: #141414;
+    font-family: 'Press Start 2P', monospace;
+}
 
 
 @keyframes bounce {

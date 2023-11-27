@@ -1,9 +1,11 @@
 <?php
+
 require './conn.php';
+require './checkform.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = mysqli_real_escape_string($conn, $_POST['user']);
-    $password = mysqli_real_escape_string($conn, $_POST['senha']); 
+    $user = sanitize($conn, $_POST['user']);
+    $password = sanitize($conn, $_POST['senha']); 
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE nomeUser = ? AND password = SHA1(?)");
     $stmt->bind_param("ss", $user, $password);
@@ -18,7 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../index.php");
         exit;
     } else {
-        header("Location: ../login.php");
+        echo "<script>
+            alert('Usuario ou senha incorretos.');
+            window.location.href='../login.php'
+        </script>";
         exit;
     }
 }

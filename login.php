@@ -14,7 +14,12 @@
   </head>
 
   <body>
-    <form id="login-form" action="./src/process_login.php" method="POST" onsubmit="return validateForm()">
+    <form
+      id="login-form"
+      action="./src/process_login.php"
+      method="POST"
+      onsubmit="return validateForm()"
+    >
       <h1>Login</h1>
       <div class="inputs-list">
 

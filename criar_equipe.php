@@ -1,3 +1,25 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+require './src/conn.php';
+
+$nomeEquipe = $_POST["nomeEquipe"];
+$senhaEquipe = sha1($_POST["senhaEquipe"]);
+
+$sql = "INSERT INTO equipes (nomeEquipe, senhaEquipe) VALUES ('$nomeEquipe', '$senhaEquipe')";
+$result = $conn->query($sql);
+if ($result) {
+    session_start();
+    $_SESSION['cc_equipe'] = $conn->insert_id;
+   
+    echo "<script>window.location.href='./equipe.php'</script>"; 
+} else {
+    echo "<script>window.location.href='./criar_equipe.php'</script>"; 
+}
+
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -23,11 +45,7 @@
     <a id="voltar" href="equipe.php">Voltar</a>
     <div class="container">
         <div class="menu">
-            <h1 class="title">Criar Equipe</h1>
-           
-            
-                
-            
+            <h1 class="title">Criar Equipe</h1> 
         </div>
 
         <div class="container team-form">

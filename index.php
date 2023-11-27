@@ -13,10 +13,10 @@
 </head>
 
 <body>
+    <script src="generator.js"></script>
 
     <?php require './src/navbar.php'?>
 
-    <div class="points-display"></div>
     <div id="conteudo">
 
         <div class="bouncing-text">
@@ -52,9 +52,12 @@
             </div>
             <input id="comando" type="text" placeholder="$">
         </div>
+        <div>
+            <button id="startButton" class="button-start" onclick="startTerminal()">$T4RT</button>
+            <div id="pontuacao"  class="textos"  style="display: none;">Pontuação: 0</div>
+        </div>
     </div>
     <div id="cod11"></div>
-    <script src="generator.js"></script>
 </body>
 
 </html>
