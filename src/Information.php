@@ -26,7 +26,12 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                return mysqli_fetch_assoc($result);
+                if($id != ""){
+                    return mysqli_fetch_assoc($result);
+                }else{
+                    return $result;
+                    
+                }
             } else {
                 return [];
             }
@@ -43,7 +48,13 @@
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
-                return mysqli_fetch_assoc($result);
+                if($id != ""){
+                    return mysqli_fetch_assoc($result);
+                }else{
+                    return $result;
+                    
+                }
+                
             } else {
                 return [];
             }

@@ -14,7 +14,12 @@
 
 <body>
 
-    <?php require './src/navbar.php'?>
+    <?php require './src/navbar.php';
+
+    if(isset($_GET['error'])){
+        echo "<script>alert('Criação de equipe falhou, tente novamente!')</script>";
+    }
+    ?>
     <a id="voltar" href="equipe.php">Voltar</a>
     <div class="container">
         <div class="menu">
@@ -25,8 +30,8 @@
             
         </div>
 
-        <div>
-            <form action="" method="POST" id="team-form">
+        <div class="container team-form">
+            <form action="./src/create_team.php" method="POST" class="team-form" id="team-form">
                 <div class="input-container">
                     <label for="nomeEquipe">Nome</label>
                     <input type="text" name="nomeEquipe" value="">
