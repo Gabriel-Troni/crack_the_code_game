@@ -18,21 +18,45 @@ header {
     gap: 60px;
 }
 
-.container{
+.dispontos {
+    display: flex;
+}
+
+#pon {
+    color: #149414;
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+}
+
+h1 {
+    color: #149414;
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+    /* Remova a propriedade width ou ajuste conforme necessário */
+}
+
+.points-display {
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+    width: 20px;
+}
+
+.container {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin-inline: auto;
     margin-block: 2.5rem;
 }
-.menu{
+
+.menu {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
-form{
+form {
     color: #149414;
     display: flex;
     flex-direction: column;
@@ -40,18 +64,20 @@ form{
     width: 20%;
 }
 
-.input-container{
+.input-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 5px;
     justify-content: center;
 }
-.title{
-        font-family: 'Press Start 2P', monospace;
-        color: #149414;
-    
+
+.title {
+    font-family: 'Press Start 2P', monospace;
+    color: #149414;
+
 }
+
 header a {
     font-family: 'Press Start 2P', monospace;
     text-decoration: none;
@@ -103,25 +129,26 @@ header a {
     margin-bottom: 5px;
 }
 
-.btn{
+.btn {
     background-color: #149414;
     color: white;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 10px;
     cursor: pointer;
     height: 50%;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #17b817;
 
 }
-.button-start{
+
+.button-start {
     cursor: pointer;
     margin: 25px;
     border: none;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 10px;
     background-color: #149414;
     width: 100%;
