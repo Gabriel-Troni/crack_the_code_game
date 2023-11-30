@@ -16,7 +16,6 @@
 
     <?php require './src/navbar.php' ?>
 
-
     <div id="conteudo">
 
         <div class="bouncing-text">
@@ -36,7 +35,7 @@
             <div class="e2">E</div>
         </div>
         <div class="dispontos" style="color: #149414; font-family: 'Press Start 2P', monospace;">
-            <h2 id="pon">pontos: <span class="points-display">0</span></h2>
+            <h2 id="pon">Pontos: <span class="points-display">0</span></h2>
         </div>
 
         <div id="terminal">

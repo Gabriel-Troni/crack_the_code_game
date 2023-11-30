@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $userData = $result->fetch_assoc();
         $_SESSION['cc_user'] = $userData['idUser'];
+        $_SESSION['cc_email'] = $userData['email'];
         header("Location: ../index.php");
         exit;
     } else {

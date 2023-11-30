@@ -38,10 +38,10 @@
         }
         function getTeamsPoints($conn, $id = ""){
             if($id != ""){
-                $sql = "SELECT B.*, SUM(points) AS PTS FROM users A INNER JOIN equipes B on A.equipe = B.idEquipe WHERE B.idEquipe = ".$id." GROUP BY A.equipe ORDER BY PTS DESC";
+                $sql = "SELECT C.nomeEquipe,C.idEquipe, SUM(points) AS PTS FROM partidas A INNER JOIN users B ON A.email = B.email INNER JOIN equipes C on C.idEquipe = B.equipe WHERE C.idEquipe = ".$id." GROUP BY B.equipe ORDER BY PTS DESC";
 
             }else{
-                $sql = "SELECT B.*, SUM(points) AS PTS FROM users A INNER JOIN equipes B on A.equipe = B.idEquipe GROUP BY A.equipe ORDER BY PTS DESC";
+                $sql = "SELECT C.nomeEquipe,C.idEquipe, SUM(points) AS PTS FROM partidas A INNER JOIN users B ON A.email = B.email INNER JOIN equipes C on C.idEquipe = B.equipe GROUP BY B.equipe ORDER BY PTS DESC";
             }
             
 

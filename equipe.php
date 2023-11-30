@@ -61,6 +61,9 @@
             <?php
                 $html = "";
                 foreach ($allTeams as $team) {
+                    if($team['idEquipe'] != $resultUser['equipe']){
+
+                    
                 $html .= "
                 <li class='rank-item'>
                     <div class='team-container-join'>
@@ -81,7 +84,7 @@
                     </div>
                 </li>    
                 ";
-
+            }
                 }
                 echo $html;
             ?>

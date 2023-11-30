@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result) {
             session_start();
             $_SESSION['cc_user'] = $conn->insert_id;
+            $_SESSION['cc_email'] = $email;
 
             echo "<script>window.location.href='../index.php'</script>";
         } else {

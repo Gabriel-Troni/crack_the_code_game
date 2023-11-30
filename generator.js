@@ -55,36 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-/* VERSÃO MENOS OPTIMIZADA
-document.addEventListener("DOMContentLoaded", function () {
-    var comandoInput = document.getElementById("comando");
-    comandoInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-            var valorDigitado = comandoInput.value;
-            for (let j = 1; j <= i; j++) {
-                var codigo = document.getElementById(`cod${j}`).innerHTML;
-                if (valorDigitado === codigo) {
-                    alert("boa")
-                    // se digitar o valor igual, todos os códigos acima vão para baixo, como uma pilha
-                    for (let k = j; k <= 10; k++) {
-                        var codigoAcima = document.getElementById(`cod${k + 1}`).textContent.trim();
-                        if (codigoAcima === '') {
-                            document.getElementById(`cod${k}`).innerText = ''; //se não tiver nada na div acima, só esvazia a div e sai do loop
-                            break;
-                        } else {
-                            document.getElementById(`cod${k}`).innerText = codigoAcima;
-                        }
-                    }
-                    //reseta para que o as divs sejam populadas desde o inicio
-                    i = 1;
-                }
-            }
-        }
-    });
-});*/
-
 function generateCode(size) {
     let code = '';
     for (let a = 0; a < size; a++) {
@@ -96,12 +66,28 @@ function generateCode(size) {
 
 let pontos = 0;
 let i = 1;
+
+const saveMatch = (points)=>{
+
+    if(points != null){
+
+        let sendData = new FormData
+
+        sendData.append('points', points);
+
+        fetch('./src/save_match.php', {
+            method: "POST", 
+            body: sendData, 
+        }).then((res)=>{}
+        ).then((res)=> {window.location.reload()});
+    }
+}
 function populateDiv() {
     if (i <= 11) {
         if (i == 11) {
             alert(`Game Over, você fez ${pontos}`);
-            window.location.reload();
-            return
+            saveMatch(pontos);
+            
         }
         let div = document.getElementById(`cod${i}`);
         if (div.innerHTML.trim() === '') {
