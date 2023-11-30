@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $nomeUser = sanitize($conn, $_POST["user"]);
     $email = sanitize($conn, $_POST["email"]);
-    $password = sha1(sanitize($conn, $_POST["senha"])); 
+    $password = sha1(sanitize($conn, $_POST["senha"]));
 
     $sql_email = "SELECT * FROM users WHERE email = '$email'";
     $result_email = $conn->query($sql_email);
@@ -19,12 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             window.location.href='../register.php'
         </script>";
     } else {
-        $sql = "INSERT INTO users (nomeUser, email, password, points) VALUES ('$nomeUser', '$email', '$password', 0)";
+        $sql = "INSERT INTO users (nomeUser, email, password) VALUES ('$nomeUser', '$email', '$password')";
         $result = $conn->query($sql);
         if ($result) {
             session_start();
             $_SESSION['cc_user'] = $conn->insert_id;
-    
+            $_SESSION['cc_email'] = $email;
+
             echo "<script>window.location.href='../index.php'</script>";
         } else {
             echo "<script>

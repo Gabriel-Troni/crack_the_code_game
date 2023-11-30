@@ -13,9 +13,8 @@
 </head>
 
 <body>
-    <script src="generator.js"></script>
 
-    <?php require './src/navbar.php'?>
+    <?php require './src/navbar.php' ?>
 
     <div id="conteudo">
 
@@ -35,6 +34,9 @@
             <div class="d">D</div>
             <div class="e2">E</div>
         </div>
+        <div class="dispontos" style="color: #149414; font-family: 'Press Start 2P', monospace;">
+            <h2 id="pon">Pontos: <span class="points-display">0</span></h2>
+        </div>
 
         <div id="terminal">
 
@@ -52,12 +54,10 @@
             </div>
             <input id="comando" type="text" placeholder="$">
         </div>
-        <div>
-            <button id="startButton" class="button-start" onclick="startTerminal()">$T4RT</button>
-            <div id="pontuacao"  class="textos"  style="display: none;">Pontuação: 0</div>
-        </div>
     </div>
     <div id="cod11"></div>
+    <script src="generator.js"></script>
+
 </body>
 
 </html>
