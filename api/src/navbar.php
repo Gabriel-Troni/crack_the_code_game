@@ -1,7 +1,7 @@
 <?php   
+session_start();
 require __DIR__ . '/Information.php';
 require __DIR__ . '/conn.php';
-session_start();
 ?>
 <style>
     .user-welcome{
@@ -27,6 +27,5 @@ session_start();
         $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
         
         ?>
-
         <p class="user-welcome">Bem-vindo <?=$resultUser['nomeUser']?></p>
 </header>
