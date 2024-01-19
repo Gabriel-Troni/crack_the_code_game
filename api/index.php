@@ -14,7 +14,7 @@
 
 <body>
 
-    <?php require '/api/src/navbar.php' ?>
+    <?php require './src/navbar.php' ?>
     <div id="conteudo">
 
         <div class="bouncing-text">
