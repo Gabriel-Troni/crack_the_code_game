@@ -11,8 +11,9 @@
         <a href="/api/index.php"> Jogar </a>
         <a href="/api/src/logout.php"> Sair </a>
         <?php
-        require __DIR__ . '/src/Information.php';
-        require __DIR__ . '/src/conn.php';
+        echo '<h1>' . __DIR__ . '</h1>';
+        require __DIR__ . '/Information.php';
+        require __DIR__ . '/conn.php';
         session_start();
 
         if (empty($_SESSION['cc_user'])) {
