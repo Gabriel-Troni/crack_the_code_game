@@ -5,6 +5,7 @@
     }
 },
     "routes": [
+        { "src": "/api/src/(.*)", "dest": "/api/src/$1" },
         { "src": "/(.*)", "dest": "/api/$1" }
     ]
 }
