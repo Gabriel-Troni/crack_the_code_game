@@ -1,3 +1,4 @@
+<?php die('O caminho de ida deu certo!') ?>
 <style>
     .user-welcome{
         color: #149414;
