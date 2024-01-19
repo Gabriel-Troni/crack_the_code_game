@@ -11,12 +11,12 @@
         <a href="/api/index.php"> Jogar </a>
         <a href="/api/src/logout.php"> Sair </a>
         <?php
-        require '/api/src/Information.php';
-        require '/api/src/conn.php';
+        require __DIR__ . '/src/Information.php';
+        require __DIR__ . '/src/conn.php';
         session_start();
 
         if (empty($_SESSION['cc_user'])) {
-            echo "<script>window.location.href='/api/login.php'</script>"
+            echo "<script>window.location.href= '/api/login.php'</script>"
             ?>
             <a href="/api/login.php"> Entrar </a>
             <a href="/api/register.php"> Cadastrar-se </a>
