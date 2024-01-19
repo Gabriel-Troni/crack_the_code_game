@@ -1,19 +1,27 @@
-# Projeto Final da Matéria DESENVOLVIMENTO WEB I - DS122 - 2023
+# Country_Search
+The presented project is a typing game developed as the final evaluation for the Web Development I course in our Bachelor's degree program in System Analysis and Development. Please note that this repository is a fork of the original one.
 
-## Autores
+Each programmer chose the area they would like to work on, and I specifically focused on database modeling, SQL queries, and PHP backend validations. Although some queries were not implemented due to the project's deadline, we decided to include them in the 'information.php' file.
 
-Gabriel Troni<br>
-Matheus Grego<br>
-Raul Bana<br>
-Rodolfo C. dos Santos
-
-## Descrição
-
-Este projeto é o trabalho final da disciplina WEB1, focado no desenvolvimento de um jogo de digitação web. O jogo desafia os usuários a digitar corretamente sequências de caracteres que aparecem na tela, visando melhorar a velocidade e precisão de digitação.
-
-## Tecnologias Utilizadas
-
-- HTML
-- CSS
-- JavaScript
+## Technologies Used
+- SQL
 - PHP
+- Javascript
+- CSS
+- HTML
+
+## Features
+- Resgistration and Login system
+- Typing game screen
+- Possibility to create a team
+- Possibility to join a team (with password)
+- Leaderboard containing top players
+
+## Screenshots
+<div style="display: flex;">
+  <img src="" alt="" style="width: 100%">
+  <img src="" alt="" style="width: 100%">
+</div>
+
+## Acknowledgements
+Special thanks to Professor Alexander Kutzke for teaching this course and providing the necessary guidance for the project.
