@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/leaderboard.css">
+    <link rel="stylesheet" type="text/css" href="/styles/leaderboard.css">
 </head>
 <?php
-require './src/Information.php';
-require './src/conn.php';
+require '/api/src/Information.php';
+require '/api/src/conn.php';
 $info = new Information();
 $teams = $info->getTeamsPoints($conn);
 ?>

@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/register.css">
+    <link rel="stylesheet" type="text/css" href="/styles/register.css">
 </head>
 
 <body>
-    <form id="login-form" action="./src/process_register.php" method="POST">
+    <form id="login-form" action="/api/src/process_register.php" method="POST">
       <h1>Cadastro</h1>
       <div class="inputs-list">
 

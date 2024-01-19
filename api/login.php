@@ -10,13 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/login.css" />
   </head>
 
   <body>
     <form
       id="login-form"
-      action="./src/process_login.php"
+      action="/api/src/process_login.php"
       method="POST"
       onsubmit="return validateForm()"
     >
@@ -43,6 +43,6 @@
         <a href="register.php">Registrar-se</a>
       </div>
     </form>
-    <script src="./src/validation.js"></script>
+    <script src="/api/src/validation.js"></script>
   </body>
 </html>

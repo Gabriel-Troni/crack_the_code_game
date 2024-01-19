@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-require './src/conn.php';
+require '/api/src/conn.php';
 
 $nomeEquipe = $_POST["nomeEquipe"];
 $senhaEquipe = sha1($_POST["senhaEquipe"]);
@@ -15,8 +15,6 @@ if ($result) {
 } else {
     echo "<script>window.location.href='./criar_equipe.php'</script>"; 
 }
-
-
 }
 ?>
 
@@ -27,7 +25,7 @@ if ($result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crack The Code</title>
-    <link rel="stylesheet" type="text/css" href="./equipe.css">
+    <link rel="stylesheet" type="text/css" href="/styles/equipe.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
@@ -36,7 +34,7 @@ if ($result) {
 
 <body>
 
-    <?php require './src/navbar.php';
+    <?php require '/api/src/navbar.php';
 
     if(isset($_GET['error'])){
         echo "<script>alert('Criação de equipe falhou, tente novamente!')</script>";
@@ -49,7 +47,7 @@ if ($result) {
         </div>
 
         <div class="container team-form">
-            <form action="./src/create_team.php" method="POST" class="team-form" id="team-form">
+            <form action="/api/src/create_team.php" method="POST" class="team-form" id="team-form">
                 <div class="input-container">
                     <label for="nomeEquipe">Nome</label>
                     <input type="text" name="nomeEquipe" value="">

@@ -10,8 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $updateUser = $conn->query("UPDATE users SET equipe = ".$_POST['team']." WHERE idUser=".$_POST['user']."");
         }
         $conn->close();
-        echo "<script>window.location.href='../equipe.php'</script>";
+        echo "<script>window.location.href='/api/equipe.php'</script>";
     } 
 }
-echo "<script>window.location.href='../equipe.php'</script>";
+echo "<script>window.location.href='/api/equipe.php'</script>";
 ?>

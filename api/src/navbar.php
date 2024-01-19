@@ -6,20 +6,20 @@
 </style>
 
 <header>
-        <a href="leaderboard.php"> Leaderboard </a>
-        <a href="equipe.php"> Equipes </a>
-        <a href="index.php"> Jogar </a>
-        <a href="./src/logout.php"> Sair </a>
+        <a href="/api/leaderboard.php"> Leaderboard </a>
+        <a href="/api/equipe.php"> Equipes </a>
+        <a href="/api/index.php"> Jogar </a>
+        <a href="/api/src/logout.php"> Sair </a>
         <?php
-        require './src/Information.php';
-        require './src/conn.php';
+        require '/api/src/Information.php';
+        require '/api/src/conn.php';
         session_start();
 
         if (empty($_SESSION['cc_user'])) {
-            echo "<script>window.location.href='./login.php'</script>"
+            echo "<script>window.location.href='/api/login.php'</script>"
             ?>
-            <a href="login.php"> Entrar </a>
-            <a href="register.php"> Cadastrar-se </a>
+            <a href="/api/login.php"> Entrar </a>
+            <a href="/api/register.php"> Cadastrar-se </a>
             <?php
         }
 

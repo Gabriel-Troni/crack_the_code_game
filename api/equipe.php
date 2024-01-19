@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crack The Code</title>
-    <link rel="stylesheet" type="text/css" href="./equipe.css">
+    <link rel="stylesheet" type="text/css" href="/styles/equipe.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&family=Press+Start+2P&display=swap"
@@ -13,12 +13,7 @@
 </head>
 
 <body>
-
-    <?php require './src/navbar.php';
-    
-    
-    
-    ?>
+    <?php require '/api/src/navbar.php'; ?>
     <a id="voltar" href="index.php">Voltar</a>
     <div class="container">
         <div class="menu">
@@ -31,7 +26,7 @@
             $userTeam = $userInfo->getTeams($conn,$resultUser['equipe']);
             $userTeamPoints = $userInfo->getTeamsPoints($conn, $resultUser['equipe']);
         ?>
-            <form action="./src/leave_team.php" method="POST" class="team-container" id="team-container">
+            <form action="/api/src/leave_team.php" method="POST" class="team-container" id="team-container">
                 <h1>Sua Equipe</h1>
                 <div class="details-container">
                     <div class="team-detail">
@@ -43,13 +38,8 @@
                     
                         <input type="hidden" id="user" value="<?=$_SESSION['cc_user']?>">
                         <input type="hidden" id="equipe" value="<?=$resultUser['equipe']?>">
-                        <button type="submit" class="leave-btn" id="leave-btn">Sair</button>
-                        
-                        
-                    </div>
-                    
-                    
-                
+                        <button type="submit" class="leave-btn" id="leave-btn">Sair</button>          
+                    </div> 
                 </form>
                 <?php
         }
@@ -71,7 +61,7 @@
                             <h3>".$team['nomeEquipe']."</h3>
                         </div>
                         <div class='team-info'>
-                            <form method='POST' action='./src/join_team.php'>
+                            <form method='POST' action='/api/src/join_team.php'>
                                 <label for='teampass'>Senha</label>
 
                                 <input type='hidden' name='user' value=".$_SESSION['cc_user'].">
@@ -103,7 +93,7 @@
             sendData.append('equipe',equipe);
             if(confirm('Deseja sair da equipe?')){
 
-                fetch('./src/leave_team.php', {
+                fetch('/api/src/leave_team.php', {
                     method: "POST", 
                     body: sendData, 
                 }).then((res)=>

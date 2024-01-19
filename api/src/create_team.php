@@ -13,17 +13,13 @@ session_start();
     if ($result) {
         $changeTeam = $conn->query("UPDATE users SET equipe = '$idEquipe' WHERE idUser = ".$_SESSION['cc_user']."");
         $conn->close();
-        echo "<script>window.location.href='../equipe.php'</script>"; 
+        echo "<script>window.location.href='/api/equipe.php'</script>"; 
     } else {
         $conn->close();
-        echo "<script>window.location.href='../equipe.php?error=1'</script>"; 
+        echo "<script>window.location.href='/api/equipe.php?error=1'</script>"; 
     }
 
    
 }
-echo "<script>window.location.href='../equipe.php'</script>";
-
-
-
+echo "<script>window.location.href='/api/equipe.php'</script>";
 ?>
-
