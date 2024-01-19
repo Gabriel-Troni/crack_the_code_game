@@ -1,3 +1,8 @@
+<?php   
+require __DIR__ . '/Information.php';
+require __DIR__ . '/conn.php';
+session_start();
+?>
 <style>
     .user-welcome{
         color: #149414;
@@ -11,10 +16,6 @@
         <a href="/api/index.php"> Jogar </a>
         <a href="/api/src/logout.php"> Sair </a>
         <?php
-        require __DIR__ . '/Information.php';
-        require __DIR__ . '/conn.php';
-        session_start();
-
         if (empty($_SESSION['cc_user'])) {
             echo "<script>window.location.href= ' . __DIR__ . '/../login.php'</script>"
             ?>
@@ -22,8 +23,6 @@
             <a href="/api/register.php"> Cadastrar-se </a>
             <?php
         }
-
-        
         $userInfo = new Information;
         $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
         
