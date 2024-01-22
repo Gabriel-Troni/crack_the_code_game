@@ -1,6 +1,4 @@
-<?php 
-session_start() 
-?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -58,6 +56,6 @@ session_start()
         </div>
     </div>
     <div id="cod11"></div>
-    <script src="src/generator.js"></script>
+    <script src="../scripts/generator.js"></script>
 </body>
 </html>
