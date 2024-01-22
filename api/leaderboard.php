@@ -12,13 +12,13 @@
     <link rel="stylesheet" type="text/css" href="/styles/leaderboard.css">
 </head>
 <?php
-require '/api/src/Information.php';
-require '/api/src/conn.php';
+require __DIR__ . '/src/Information.php';
+require __DIR__ . '/src/conn.php';
 $info = new Information();
 $teams = $info->getTeamsPoints($conn);
 ?>
 <body>
-    <a id="voltar" href="./index.php">voltar</a>
+    <a id="voltar" href="index.php">voltar</a>
     <h1>ranking das equipes</h1>
     <div id="quadrado">
         <ul class="rank-list">
@@ -43,9 +43,7 @@ $teams = $info->getTeamsPoints($conn);
             
             $rank++;    
         }
-        echo $html;
-        
-        
+        echo $html;  
         ?>
         </ul>
     </div>
