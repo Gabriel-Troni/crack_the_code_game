@@ -58,8 +58,6 @@ session_start()
         </div>
     </div>
     <div id="cod11"></div>
-    <script src="/var/task/user/api/src/generator.js"></script>
-
+    <script src="src/generator.js"></script>
 </body>
-
 </html>
