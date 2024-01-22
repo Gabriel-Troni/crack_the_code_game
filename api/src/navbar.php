@@ -15,7 +15,8 @@
         require __DIR__ . '/conn.php';
 
         if (!isset($_SESSION['cc_user'])) {
-            echo "<script>window.location.href= ' . __DIR__ . '/../login.php'</script>"
+            //echo "<script>window.location.href= ' . __DIR__ . '/../login.php'</script>"
+            $_SESSION['cc_user'] = 0;
             ?>
             <a href="/api/login.php"> Entrar </a>
             <a href="/api/register.php"> Cadastrar-se </a>
