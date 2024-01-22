@@ -6,6 +6,7 @@
 </style>
 
 <header>
+        <?=__DIR__?>
         <a href="/api/leaderboard.php"> Leaderboard </a>
         <a href="/api/equipe.php"> Equipes </a>
         <a href="/api/index.php"> Jogar </a>
