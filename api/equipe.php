@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <?php require '/api/src/navbar.php'; ?>
+    <?php require __DIR__ . '/src/navbar.php'; ?>
     <a id="voltar" href="index.php">Voltar</a>
     <div class="container">
         <div class="menu">
@@ -26,7 +26,7 @@
             $userTeam = $userInfo->getTeams($conn,$resultUser['equipe']);
             $userTeamPoints = $userInfo->getTeamsPoints($conn, $resultUser['equipe']);
         ?>
-            <form action="/api/src/leave_team.php" method="POST" class="team-container" id="team-container">
+            <form action="src/leave_team.php" method="POST" class="team-container" id="team-container">
                 <h1>Sua Equipe</h1>
                 <div class="details-container">
                     <div class="team-detail">
@@ -61,7 +61,7 @@
                             <h3>".$team['nomeEquipe']."</h3>
                         </div>
                         <div class='team-info'>
-                            <form method='POST' action='/api/src/join_team.php'>
+                            <form method='POST' action='src/join_team.php'>
                                 <label for='teampass'>Senha</label>
 
                                 <input type='hidden' name='user' value=".$_SESSION['cc_user'].">
@@ -93,7 +93,7 @@
             sendData.append('equipe',equipe);
             if(confirm('Deseja sair da equipe?')){
 
-                fetch('/api/src/leave_team.php', {
+                fetch(__DIR__ . '/src/leave_team.php', {
                     method: "POST", 
                     body: sendData, 
                 }).then((res)=>

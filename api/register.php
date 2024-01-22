@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <form id="login-form" action="/api/src/process_register.php" method="POST">
+    <form id="login-form" action="src/process_register.php" method="POST">
       <h1>Cadastro</h1>
       <div class="inputs-list">
 

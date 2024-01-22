@@ -16,7 +16,7 @@
   <body>
     <form
       id="login-form"
-      action="/api/src/process_login.php"
+      action="src/process_login.php"
       method="POST"
       onsubmit="return validateForm()"
     >
@@ -43,6 +43,6 @@
         <a href="register.php">Registrar-se</a>
       </div>
     </form>
-    <script src="/api/src/validation.js"></script>
+    <script src="../scripts/validation.js"></script>
   </body>
 </html>
