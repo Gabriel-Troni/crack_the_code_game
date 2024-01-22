@@ -16,8 +16,8 @@
 
         if (!isset($_SESSION['cc_user'])) {
             //echo "<script>window.location.href= ' . __DIR__ . '/../login.php'</script>"
-            echo "<a href="/api/login.php"> Entrar </a>";
-            echo "<a href="/api/register.php"> Cadastrar-se </a>";
+            echo "<a href='/api/login.php'> Entrar </a>";
+            echo "<a href='/api/register.php'> Cadastrar-se </a>";
         } else {
             $userInfo = new Information;
             $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
