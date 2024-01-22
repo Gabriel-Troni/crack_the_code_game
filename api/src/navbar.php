@@ -21,7 +21,7 @@
         } else {
             $userInfo = new Information;
             $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
-            echo "<p class='user-welcome'>Bem-vindo $resultUser['nomeUser']</p>";
+            echo "<p class='user-welcome'>Bem-vindo " . $resultUser['nomeUser'] . "</p>";
         }
         ?>
 
