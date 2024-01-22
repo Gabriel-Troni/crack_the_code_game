@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userData = $result->fetch_assoc();
         $_SESSION['cc_user'] = $userData['idUser'];
         $_SESSION['cc_email'] = $userData['email'];
-        header("Location: /api/index.php");
+        header("Location: ../index.php");
         exit;
     } else {
         echo "<script>
