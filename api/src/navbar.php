@@ -16,18 +16,13 @@
 
         if (!isset($_SESSION['cc_user'])) {
             //echo "<script>window.location.href= ' . __DIR__ . '/../login.php'</script>"
-            $_SESSION['cc_user'] = 0;
-            ?>
-            <a href="/api/login.php"> Entrar </a>
-            <a href="/api/register.php"> Cadastrar-se </a>
-            <?php
+            echo "<a href="/api/login.php"> Entrar </a>";
+            echo "<a href="/api/register.php"> Cadastrar-se </a>";
+        } else {
+            $userInfo = new Information;
+            $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
+            echo "<p class="user-welcome">Bem-vindo <?=$resultUser['nomeUser']?></p>";
         }
-
-        
-        $userInfo = new Information;
-        $resultUser = $userInfo->getUsers($conn,$_SESSION['cc_user']);
-        
         ?>
 
-        <p class="user-welcome">Bem-vindo <?=$resultUser['nomeUser']?></p>
 </header>
