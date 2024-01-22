@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    require './conn.php';
+    require __DIR__ . '/conn.php';
 
     session_start();
     $user = $_SESSION['cc_email'];
@@ -10,5 +10,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $saveMatch = $conn->query($sql);
     $conn->close(); 
 }
-echo "<script>window.location.href='./logout.php'</script>";
+echo "<script>window.location.href='logout.php'</script>";
 ?>

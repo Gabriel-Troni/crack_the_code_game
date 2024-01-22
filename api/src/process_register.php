@@ -1,6 +1,6 @@
 <?php
-require './conn.php';
-require './checkform.php';
+require __DIR__ . '/conn.php';
+require __DIR__ . '/checkform.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeUser = sanitize($conn, $_POST["user"]);
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result_email->num_rows > 0) {
         echo "<script>
             alert('O e-mail já está sendo utilizado.');
-            window.location.href='/api/register.php'
+            window.location.href='../register.php'
         </script>";
     } else {
         $sql = "INSERT INTO users (nomeUser, email, password) VALUES ('$nomeUser', '$email', '$password')";
@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['cc_user'] = $conn->insert_id;
             $_SESSION['cc_email'] = $email;
 
-            echo "<script>window.location.href='/api/index.php'</script>";
+            echo "<script>window.location.href='../index.php'</script>";
         } else {
             echo "<script>
                     alert('Ocorreu um erro ao criar o usuário, tente novamente.');
-                    window.location.href='/api/register.php'
+                    window.location.href='../register.php'
                 </script>";
         }
     }
 }
-echo "<script>window.location.href='/api/register.php'</script>";
+echo "<script>window.location.href='../register.php'</script>";
 ?>

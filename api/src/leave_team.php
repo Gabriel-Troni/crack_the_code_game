@@ -1,5 +1,5 @@
 <?php
-require './conn.php';
+require __DIR__ . '/conn.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

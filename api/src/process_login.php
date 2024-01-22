@@ -1,7 +1,7 @@
 <?php
 
-require './conn.php';
-require './checkform.php';
+require __DIR__ . '/conn.php';
+require __DIR__ . '/checkform.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = sanitize($conn, $_POST['user']);
@@ -23,11 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script>
             alert('Usuario ou senha incorretos.');
-            window.location.href='/api/login.php'
+            window.location.href='../login.php'
         </script>";
         exit;
     }
 }
-header("Location: /api/login.php");
+header("Location: ../login.php");
 exit;
 ?>
