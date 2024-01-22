@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-require '/api/src/conn.php';
+require __DIR__ . '/src/conn.php';
 
 $nomeEquipe = $_POST["nomeEquipe"];
 $senhaEquipe = sha1($_POST["senhaEquipe"]);
@@ -11,9 +11,9 @@ if ($result) {
     session_start();
     $_SESSION['cc_equipe'] = $conn->insert_id;
    
-    echo "<script>window.location.href='./equipe.php'</script>"; 
+    echo "<script>window.location.href='equipe.php'</script>"; 
 } else {
-    echo "<script>window.location.href='./criar_equipe.php'</script>"; 
+    echo "<script>window.location.href='criar_equipe.php'</script>"; 
 }
 }
 ?>
@@ -34,7 +34,7 @@ if ($result) {
 
 <body>
 
-    <?php require '/api/src/navbar.php';
+    <?php require __DIR__ . '/src/navbar.php';
 
     if(isset($_GET['error'])){
         echo "<script>alert('Criação de equipe falhou, tente novamente!')</script>";
@@ -47,7 +47,7 @@ if ($result) {
         </div>
 
         <div class="container team-form">
-            <form action="/api/src/create_team.php" method="POST" class="team-form" id="team-form">
+            <form action="src/create_team.php" method="POST" class="team-form" id="team-form">
                 <div class="input-container">
                     <label for="nomeEquipe">Nome</label>
                     <input type="text" name="nomeEquipe" value="">

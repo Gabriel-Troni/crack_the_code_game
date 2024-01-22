@@ -43,6 +43,7 @@
                 </form>
                 <?php
         }
+        if(!isset($userInfo)) {$userInfo = new Information;}
         $allTeams = $userInfo->getTeams($conn);
         ?>
 
