@@ -1,4 +1,4 @@
-# Country_Search
+# crack_the_code_game
 The presented project is a typing game developed as the final evaluation for the Web Development I course in our Bachelor's degree program in System Analysis and Development. Please note that this repository is a fork of the original one.
 
 Each programmer chose the area they would like to work on, and I specifically focused on database modeling, SQL queries, and PHP backend validations. Although some queries were not implemented due to the project's deadline, we decided to include them in the 'information.php' file.
