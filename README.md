@@ -21,11 +21,17 @@ Unfortunately, due to compatibility issues on Vercel, this specific project is n
 
 ## Screenshots
 <div style="display: flex;">
-  <img src="./images/printScreen1.PNG" alt="Main screen print" style="width: 100%">
-  <img src="./images/printScreen2.PNG" alt="Teams screen print" style="width: 100%">
-  <img src="./images/printScreen3.PNG" alt="Register screen print" style="width: 100%">
-  <img src="./images/printScreen4.PNG" alt="Login screen print" style="width: 100%">
-  <img src="./images/printScreen5.PNG" alt="Leaderboard screen print" style="width: 100%">
+  <img src="./images/printScreen1.PNG" alt="Main screen print" style="width: 80%">
+  <br>
+  <br>
+  <img src="./images/printScreen2.PNG" alt="Teams screen print" style="width: 80%">
+  <br>
+  <br>
+  <img src="./images/printScreen3.PNG" alt="Register screen print" style="width: 35%">
+  <img src="./images/printScreen4.PNG" alt="Login screen print" style="width: 45%">
+  <br>
+  <br>
+  <img src="./images/printScreen5.PNG" alt="Leaderboard screen print" style="width: 80%">
 </div>
 
 ## Acknowledgements
