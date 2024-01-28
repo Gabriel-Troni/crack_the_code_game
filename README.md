@@ -3,6 +3,8 @@ The presented project is a typing game developed as the final evaluation for the
 
 Each programmer chose the area they would like to work on, and I specifically focused on database modeling, SQL queries, and PHP backend validations. Although some queries were not implemented due to the project's deadline, we decided to include them in the 'information.php' file.
 
+Unfortunately, due to compatibility issues on Vercel, this specific project is no longer available online. However, feel free to explore the code and view the screenshots provided below.
+
 ## Technologies Used
 - SQL
 - PHP
@@ -19,8 +21,11 @@ Each programmer chose the area they would like to work on, and I specifically fo
 
 ## Screenshots
 <div style="display: flex;">
-  <img src="" alt="" style="width: 100%">
-  <img src="" alt="" style="width: 100%">
+  <img src="./images/printScreen1.PNG" alt="Main screen print" style="width: 100%">
+  <img src="./images/printScreen2.PNG" alt="Teams screen print" style="width: 100%">
+  <img src="./images/printScreen3.PNG" alt="Register screen print" style="width: 100%">
+  <img src="./images/printScreen4.PNG" alt="Login screen print" style="width: 100%">
+  <img src="./images/printScreen5.PNG" alt="Leaderboard screen print" style="width: 100%">
 </div>
 
 ## Acknowledgements
